@@ -238,24 +238,6 @@ body {
   position: absolute;
   top: 250px;
   word-break: break-word;
-  background-color: darkgray;
-}
-.section-info:nth-child(odd) {
-  left: 120px;
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .section-info:nth-child(odd) {
-    left: 0px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .section-info:nth-child(odd) {
-    left: 0px;
-    top: 200px;
-  }
-}
-.section-info:nth-child(even) {
-  background-color: red;
 }
 .section-info p {
   color: #ffffff;
@@ -264,6 +246,42 @@ body {
   font-family: "Roboto", "Open Sans", sans-serif, sans-serif;
   font-size: 1rem;
   line-height: 1.75rem;
+}
+
+.odd {
+  left: 120px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .odd {
+    left: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .odd {
+    left: 0px;
+    top: 200px;
+  }
+}
+
+.even {
+  background-color: darkblue;
+  right: 120px;
+  text-align: right;
+}
+.even p {
+  background-color: darkgreen;
+  text-align: right;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .even {
+    right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .even {
+    right: 0;
+    top: 200px;
+  }
 }
 
 .section-title {

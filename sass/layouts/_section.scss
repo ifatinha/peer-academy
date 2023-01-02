@@ -9,28 +9,45 @@
     top       : 250px;
     word-break: break-word;
 
-    &:nth-child(odd) {
-        left: 120px;
-
-        @include devices(t) {
-            left: 0px;
-        }
-
-        @include devices(m) {
-            left: 0px;
-            top : 200px;
-        }
-    }
-
-    &:nth-child(even) {
-        background-color: red;
-    }
-
     p {
         color        : $white;
         max-width    : 500px;
         margin-bottom: 30px;
         @include typography-01(16);
+    }
+}
+
+.odd {
+    left: 120px;
+
+    @include devices(t) {
+        left: 0px;
+    }
+
+    @include devices(m) {
+        left: 0px;
+        top : 200px;
+    }
+}
+
+.even {
+    background-color: darkblue;
+    right           : 120px;
+    text-align      : right;
+
+    p {
+        
+        background-color: darkgreen;
+        text-align: right;
+    }
+
+    @include devices(t) {
+        right: 0;
+    }
+
+    @include devices(m) {
+        right: 0;
+        top  : 200px;
     }
 }
 
