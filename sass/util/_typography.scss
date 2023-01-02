@@ -1,0 +1,80 @@
+@function rem($pixel, $context: 16) {
+    @return ($pixel / $context)+rem;
+}
+
+@mixin typography-01($size) {
+    font-family: $font-01, $font-02, sans-serif;
+
+    @if($size==14) {
+        font-size: rem($size);
+    }
+
+    @else if($size==16) {
+        font-size  : rem(16);
+        line-height: rem(28);
+    }
+}
+
+@mixin typography-02($size) {
+    font-family: $font-02;
+
+    @if($size==14) {
+        font-size  : rem(14);
+        line-height: rem(40, 14);
+    }
+
+    @else if($size==16) {
+        font-size  : rem(16);
+        line-height: rem(24);
+    }
+
+    @else if($size==18) {
+        font-size  : rem(18);
+        line-height: rem(28, 18);
+    }
+}
+
+@mixin typography-03($size) {
+    font-family: $font-03;
+
+    @if($size==15) {
+        font-size     : rem(15);
+        font-weight   : 500;
+        line-height   : rem(16, 15);
+        letter-spacing: 1px;
+    }
+
+    @else if($size==18) {
+        font-size     : rem(18);
+        font-weight   : 600;
+        line-height   : rem(60, 18);
+        letter-spacing: -1px;
+    }
+
+    @else if($size==30) {
+        font-size     : rem(30);
+        font-weight   : 600;
+        line-height   : rem(42, 18);
+        letter-spacing: -1px;
+    }
+
+    @else if($size==35) {
+        font-size     : rem(35);
+        line-height   : rem(50, 35);
+        letter-spacing: -0.7px;
+    }
+
+    @else if($size==55) {
+        font-size  : rem(55);
+        font-weight: 700;
+        line-height: rem(65, 55);
+    }
+
+    @else if($size==80) {
+        font-size     : rem($size);
+        font-weight   : 700;
+        line-height   : rem(80);
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+    }
+}

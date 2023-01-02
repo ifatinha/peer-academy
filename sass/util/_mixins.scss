@@ -1,0 +1,22 @@
+@mixin container() {
+    margin   : 0 auto;
+    max-width: 1200px;
+    padding  : 0px 2%;
+    width    : 100%;
+}
+
+@mixin bg-properties() {
+    background-position: center center;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+}
+
+@mixin flex-properties($display:flex, $align-items, $justify-content) {
+    align-items    : $align-items;
+    display        : $display;
+    justify-content: $justify-content;
+}
+
+@mixin border-btn($color) {
+    border: 1px solid $color;
+}

@@ -1,0 +1,311 @@
+/* util */
+/* base css */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* colors */
+/* fonts */
+/* general */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  word-break: break-word;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0px 2%;
+  width: 100%;
+}
+
+.info {
+  padding-top: 250px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .info {
+    padding-top: 180px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .info {
+    padding-top: 180px;
+  }
+}
+.info p {
+  color: #ffffff;
+  max-width: 500px;
+  margin-bottom: 30px;
+  font-family: "Roboto", "Open Sans", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+.titulo-info {
+  font-family: "Poppins", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 5rem;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  display: flex;
+}
+.titulo-info span {
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .titulo-info {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  .titulo-info {
+    font-size: 2.5rem;
+    line-height: 2.8125rem;
+  }
+}
+
+.btn {
+  border-radius: 50px;
+  color: rgb(29, 29, 29);
+  display: inline-block;
+  padding: 18px 35px;
+  text-transform: uppercase;
+  transition: 0.3s all ease-in-out;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.0666666667rem;
+  letter-spacing: 1px;
+}
+.btn:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+/* layouts */
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+.header-nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.1875rem;
+  line-height: 1.4285714286rem;
+  letter-spacing: -0.7px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.nav-desktop {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  gap: 40px;
+}
+.nav-desktop a {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.0666666667rem;
+  letter-spacing: 1px;
+  transition: 0.3s all ease-in-out;
+}
+.nav-desktop a:hover {
+  color: #2293d7;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav-desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav-desktop {
+    display: none;
+  }
+}
+
+.nav-mobile {
+  background-image: url("./../images/menu.png");
+  height: 50px;
+  width: 50px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 1024px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav-mobile:hover .n-mobile {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav-mobile:hover .n-mobile {
+    display: block;
+  }
+}
+
+.n-mobile {
+  background-color: #ffffff;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 110px;
+  width: 100%;
+}
+.n-mobile li {
+  border-bottom: 1px solid #f5f5f5;
+  padding-left: 20px;
+}
+.n-mobile a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 2.8571428571rem;
+  color: #232323;
+  text-transform: uppercase;
+}
+
+.intro {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../images/intro-bg.jpg");
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.intro h1 {
+  color: #fed92e;
+}
+.intro a {
+  background-color: #fed92e;
+  border: 1px solid rgb(254, 217, 46);
+}
+
+.section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../images/section-bg-01.jpg");
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section .info {
+  background-color: darkblue;
+}
+.section h1 {
+  color: #fe2f3e;
+}
+.section a {
+  background-color: #fe2f3e;
+  border: 1px solid rgb(254, 46, 61);
+}
+
+/*# sourceMappingURL=root.css.map */

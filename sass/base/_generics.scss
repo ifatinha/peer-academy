@@ -1,0 +1,69 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    word-break : break-word;
+}
+
+html,
+body {
+    height: 100%;
+    width : 100%
+}
+
+.container {
+    @include container;
+}
+
+.info {
+    padding-top: 250px;
+
+    @include devices(t) {
+        padding-top: 180px;
+    }
+
+    @include devices(m) {
+        padding-top: 180px;
+    }
+
+    p {
+        color        : $white;
+        max-width    : 500px;
+        margin-bottom: 30px;
+        @include typography-01(16);
+    }
+}
+
+.titulo-info {
+    @include typography-03(80);
+    display: flex;
+
+    span {
+        color: $white;
+    }
+
+    @include devices(t) {
+        flex-direction: column;
+    }
+
+    @include devices(m) {
+        font-size  : rem(40);
+        line-height: rem(45);
+    }
+}
+
+.btn {
+    border-radius : 50px;
+    color         : $black-opacity;
+    display       : inline-block;
+    padding       : 18px 35px;
+    text-transform: uppercase;
+    transition    : $transition;
+    @include typography-03(15);
+
+    &:hover {
+        background-color: $white-opacity;
+    }
+}

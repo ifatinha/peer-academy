@@ -1,0 +1,82 @@
+.header {
+    position: absolute;
+    width   : 100%;
+    z-index : 999;
+}
+
+.header-nav {
+    @include flex-properties(flex, center, space-between);
+    padding: 40px 0;
+}
+
+.logo {
+    @include typography-03(35);
+    color      : $white;
+    font-weight: 600;
+}
+
+.nav-desktop {
+    @include flex-properties(flex, center, space-between);
+    color: $white;
+    gap  : 40px;
+
+    a {
+        @include typography-03(15);
+        transition: $transition;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    @include devices(t) {
+        display: none;
+    }
+
+    @include devices(m) {
+        display: none;
+    }
+}
+
+.nav-mobile {
+    background-image: url("./../images/menu.png");
+    height          : 50px;
+    width           : 50px;
+    @include bg-properties();
+
+    @include devices(l) {
+        display: none;
+    }
+
+    @include devices(t) {
+        &:hover .n-mobile {
+            display: block;
+        }
+    }
+
+    @include devices(m) {
+        &:hover .n-mobile {
+            display: block;
+        }
+    }
+}
+
+.n-mobile {
+    background-color: $white;
+    display         : none;
+    left            : 0;
+    position        : absolute;
+    top             : 110px;
+    width           : 100%;
+
+    li {
+        border-bottom: 1px solid $gray-light;
+        padding-left : 20px
+    }
+
+    a {
+        @include typography-02(14);
+        color         : $black-light;
+        text-transform: uppercase;
+    }
+}

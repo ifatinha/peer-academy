@@ -1,0 +1,20 @@
+.section {
+    background           : $linear-gradient, url("./../images/section-bg-01.jpg");
+    background-attachment: $bg-attachment;
+    height               : 100%;
+    width                : 100%;
+    @include bg-properties;
+
+    .info {
+        background-color: darkblue;
+    }
+
+    h1 {
+        color: $red;
+    }
+
+    a {
+        background-color: $red;
+        @include border-btn($red-opacity);
+    }
+}
