@@ -49,6 +49,7 @@
     }
 
     @include devices(t) {
+
         &:hover .n-mobile {
             display: block;
         }

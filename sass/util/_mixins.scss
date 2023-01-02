@@ -5,10 +5,17 @@
     width    : 100%;
 }
 
+@mixin bg-section() {
+    height               : 100%;
+    position             : relative;
+    width                : 100%;
+}
+
 @mixin bg-properties() {
     background-position: center center;
     background-size    : cover;
     background-repeat  : no-repeat;
+
 }
 
 @mixin flex-properties($display:flex, $align-items, $justify-content) {

@@ -96,7 +96,6 @@ html {
 
 body {
   font-family: "Roboto", "Open Sans", sans-serif;
-  word-break: break-word;
 }
 
 html,
@@ -110,52 +109,6 @@ body {
   max-width: 1200px;
   padding: 0px 2%;
   width: 100%;
-}
-
-.info {
-  padding-top: 250px;
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .info {
-    padding-top: 180px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .info {
-    padding-top: 180px;
-  }
-}
-.info p {
-  color: #ffffff;
-  max-width: 500px;
-  margin-bottom: 30px;
-  font-family: "Roboto", "Open Sans", sans-serif, sans-serif;
-  font-size: 1rem;
-  line-height: 1.75rem;
-}
-
-.titulo-info {
-  font-family: "Poppins", sans-serif;
-  font-size: 5rem;
-  font-weight: 700;
-  line-height: 5rem;
-  letter-spacing: -0.2px;
-  text-transform: uppercase;
-  display: flex;
-}
-.titulo-info span {
-  color: #ffffff;
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .titulo-info {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 767px) {
-  .titulo-info {
-    font-size: 2.5rem;
-    line-height: 2.8125rem;
-  }
 }
 
 .btn {
@@ -271,39 +224,92 @@ body {
   text-transform: uppercase;
 }
 
-.intro {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../images/intro-bg.jpg");
-  background-attachment: fixed;
-  height: 100%;
-  width: 100%;
+.section {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100%;
+  position: relative;
+  width: 100%;
 }
-.intro h1 {
+
+.section-info {
+  padding: 2%;
+  position: absolute;
+  top: 250px;
+  word-break: break-word;
+  background-color: darkgray;
+}
+.section-info:nth-child(odd) {
+  left: 120px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-info:nth-child(odd) {
+    left: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-info:nth-child(odd) {
+    left: 0px;
+    top: 200px;
+  }
+}
+.section-info:nth-child(even) {
+  background-color: red;
+}
+.section-info p {
+  color: #ffffff;
+  max-width: 500px;
+  margin-bottom: 30px;
+  font-family: "Roboto", "Open Sans", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+.section-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 5rem;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  display: flex;
+}
+.section-title span {
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-title {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-title {
+    font-size: 2.5rem;
+    line-height: 2.8125rem;
+  }
+}
+
+.section-about {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../images/intro-bg.jpg");
+  background-attachment: fixed;
+}
+.section-about h1 {
   color: #fed92e;
 }
-.intro a {
+.section-about a {
   background-color: #fed92e;
   border: 1px solid rgb(254, 217, 46);
 }
 
-.section {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../images/section-bg-01.jpg");
+.section-treinamento {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../../images/section-bg-01.jpg");
   background-attachment: fixed;
-  height: 100%;
-  width: 100%;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-.section .info {
-  background-color: darkblue;
-}
-.section h1 {
+.section-treinamento h1 {
   color: #fe2f3e;
 }
-.section a {
+.section-treinamento a {
   background-color: #fe2f3e;
   border: 1px solid rgb(254, 46, 61);
 }

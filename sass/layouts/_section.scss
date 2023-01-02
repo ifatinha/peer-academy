@@ -1,20 +1,53 @@
 .section {
-    background           : $linear-gradient, url("./../images/section-bg-01.jpg");
-    background-attachment: $bg-attachment;
-    height               : 100%;
-    width                : 100%;
     @include bg-properties;
+    @include bg-section;
+}
 
-    .info {
-        background-color: darkblue;
+.section-info {
+    padding   : 2%;
+    position  : absolute;
+    top       : 250px;
+    word-break: break-word;
+
+    &:nth-child(odd) {
+        left: 120px;
+
+        @include devices(t) {
+            left: 0px;
+        }
+
+        @include devices(m) {
+            left: 0px;
+            top : 200px;
+        }
     }
 
-    h1 {
-        color: $red;
+    &:nth-child(even) {
+        background-color: red;
     }
 
-    a {
-        background-color: $red;
-        @include border-btn($red-opacity);
+    p {
+        color        : $white;
+        max-width    : 500px;
+        margin-bottom: 30px;
+        @include typography-01(16);
+    }
+}
+
+.section-title {
+    @include typography-03(80);
+    display: flex;
+
+    span {
+        color: $white;
+    }
+
+    @include devices(t) {
+        flex-direction: column;
+    }
+
+    @include devices(m) {
+        font-size  : rem(40);
+        line-height: rem(45);
     }
 }
