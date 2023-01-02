@@ -1,5 +1,7 @@
+@use "sass:math";
+
 @function rem($pixel, $context: 16) {
-    @return ($pixel / $context)+rem;
+    @return math.div($pixel, $context)+rem;
 }
 
 @mixin typography-01($size) {
@@ -37,10 +39,10 @@
 @mixin typography-03($size) {
     font-family: $font-03;
 
-    @if($size==15) {
-        font-size     : rem(15);
+    @if($size==14) {
+        font-size     : rem(14);
         font-weight   : 500;
-        line-height   : rem(16, 15);
+        line-height   : rem(16);
         letter-spacing: 1px;
     }
 

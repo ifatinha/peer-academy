@@ -1,0 +1,25 @@
+.s-planos {
+    background           : $linear-gradient, url("./../../images/section-bg-02.jpg");
+    background-attachment: $bg-attachment;
+
+    h1 {
+        color: $blue;
+        word-break: break-all;
+    }
+
+    a {
+        background-color: $blue;
+        @include border-btn($blue-opacity);
+
+        &:hover {
+            background-color: $white-opacity;
+            color           : $black;
+        }
+    }
+
+    p {
+        @include devices(l) {
+            max-width: 80ch;
+        }
+    }
+}

@@ -1,57 +1,27 @@
 .section {
     @include bg-properties;
     @include bg-section;
+
+    align-items: center;
+    display    : flex;
+
+    @include devices(m) {
+        height: 140%;
+    }
 }
 
 .section-info {
-    padding   : 2%;
-    position  : absolute;
-    top       : 250px;
-    word-break: break-word;
+    position: absolute;
+    padding : 2%;
 
     p {
-        color           : $white;
-        margin-bottom   : 30px;
-        max-width       : 60ch;
-        background-color: darkblue;
+        color        : $white;
+        margin-bottom: 30px;
+        max-width    : 50ch;
         @include typography-01(16);
-    }
-}
 
-.odd {
-    left: 120px;
-
-    @include devices(t) {
-        left: 0px;
-    }
-
-    @include devices(m) {
-        left: 0px;
-        top : 200px;
-    }
-}
-
-.even {
-    background-color: darkblue;
-    right           : 120px;
-    text-align      : right;
-
-    p {
-        margin-left: 20px;
-    }
-
-    @include devices(t) {
-        right: 0;
-    }
-
-    @include devices(m) {
-        right: 0;
-        top  : 200px;
-    }
-
-    h1 {
         @include devices(m) {
-            margin-left:90px;
+            max-width: 30ch;
         }
     }
 }
@@ -69,7 +39,33 @@
     }
 
     @include devices(m) {
-        font-size  : rem(40);
-        line-height: rem(45);
+        flex-direction: column;
+        font-size     : rem(35);
+        line-height   : rem(45);
+    }
+}
+
+.odd {
+    @include devices(l) {
+        left: 120px;
+    }
+}
+
+.even {
+    text-align: right;
+    right     : 0;
+
+    @include devices(l) {
+        right: 120px;
+    }
+
+    p {
+        margin-left: 160px;
+    }
+
+    .section-title {
+        @include devices(m) {
+            margin-left: 70px;
+        }
     }
 }

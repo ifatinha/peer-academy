@@ -23,9 +23,9 @@ body {
     padding       : 18px 35px;
     text-transform: uppercase;
     transition    : $transition;
-    @include typography-03(15);
+    @include typography-03(14);
 
     &:hover {
-        background-color: $white-opacity;
+        transform: translateY(-2px);
     }
 }

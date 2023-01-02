@@ -1,0 +1,46 @@
+.home-info {
+    background-color     : $black;
+    background-attachment: $bg-attachment;
+    padding              : 80px 2%;
+}
+
+.home-info_container {
+    display              : grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap                  : 20px;
+
+    @include devices(t) {
+        grid-template-columns: repeat(3, 1fr);
+        align-content        : center;
+        justify-content      : center;
+    }
+
+    @include devices(m) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.info-item {
+    color     : $white;
+    padding   : 25px;
+    text-align: center;
+
+    &:not(&:last-child) {
+        border-right: 1px solid $black-opacity;
+    }
+
+    @include devices(m) {
+        border: transparent;
+    }
+
+    span {
+        display      : block;
+        margin-bottom: 20px;
+        @include typography-03(55);
+    }
+
+    p {
+        text-transform: uppercase;
+        @include typography-03(14);
+    }
+}

@@ -119,13 +119,13 @@ body {
   text-transform: uppercase;
   transition: 0.3s all ease-in-out;
   font-family: "Poppins", sans-serif;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  line-height: 1.0666666667rem;
+  line-height: 1rem;
   letter-spacing: 1px;
 }
 .btn:hover {
-  background-color: rgb(255, 255, 255);
+  transform: translateY(-2px);
 }
 
 /* layouts */
@@ -160,14 +160,10 @@ body {
 }
 .nav-desktop a {
   font-family: "Poppins", sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  line-height: 1.0666666667rem;
-  letter-spacing: 1px;
   transition: 0.3s all ease-in-out;
 }
 .nav-desktop a:hover {
-  color: #2293d7;
+  color: #1aebf8;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .nav-desktop {
@@ -184,7 +180,7 @@ body {
   background-image: url("./../images/menu.png");
   height: 50px;
   width: 50px;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -225,67 +221,36 @@ body {
 }
 
 .section {
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
   position: relative;
   width: 100%;
+  align-items: center;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .section {
+    height: 140%;
+  }
 }
 
 .section-info {
-  padding: 2%;
   position: absolute;
-  top: 250px;
-  word-break: break-word;
+  padding: 2%;
 }
 .section-info p {
   color: #ffffff;
   margin-bottom: 30px;
-  max-width: 60ch;
-  background-color: darkblue;
+  max-width: 50ch;
   font-family: "Roboto", "Open Sans", sans-serif, sans-serif;
   font-size: 1rem;
   line-height: 1.75rem;
 }
-
-.odd {
-  left: 120px;
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .odd {
-    left: 0px;
-  }
-}
 @media screen and (max-width: 767px) {
-  .odd {
-    left: 0px;
-    top: 200px;
-  }
-}
-
-.even {
-  background-color: darkblue;
-  right: 120px;
-  text-align: right;
-}
-.even p {
-  margin-left: 20px;
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .even {
-    right: 0;
-  }
-}
-@media screen and (max-width: 767px) {
-  .even {
-    right: 0;
-    top: 200px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .even h1 {
-    margin-left: 90px;
+  .section-info p {
+    max-width: 30ch;
   }
 }
 
@@ -308,33 +273,148 @@ body {
 }
 @media screen and (max-width: 767px) {
   .section-title {
-    font-size: 2.5rem;
+    flex-direction: column;
+    font-size: 2.1875rem;
     line-height: 2.8125rem;
   }
 }
 
-.section-about {
+@media screen and (min-width: 1024px) {
+  .odd {
+    left: 120px;
+  }
+}
+
+.even {
+  text-align: right;
+  right: 0;
+}
+@media screen and (min-width: 1024px) {
+  .even {
+    right: 120px;
+  }
+}
+.even p {
+  margin-left: 160px;
+}
+@media screen and (max-width: 767px) {
+  .even .section-title {
+    margin-left: 70px;
+  }
+}
+
+/* home layouts*/
+.home-info {
+  background-color: #000000;
+  background-attachment: fixed;
+  padding: 80px 2%;
+}
+
+.home-info_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-info_container {
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-info_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-item {
+  color: #ffffff;
+  padding: 25px;
+  text-align: center;
+}
+.info-item:not(.info-item:last-child) {
+  border-right: 1px solid rgb(29, 29, 29);
+}
+@media screen and (max-width: 767px) {
+  .info-item {
+    border: transparent;
+  }
+}
+.info-item span {
+  display: block;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.4375rem;
+  font-weight: 700;
+  line-height: 1.1818181818rem;
+}
+.info-item p {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 1px;
+}
+
+.s-about {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../images/intro-bg.jpg");
   background-attachment: fixed;
 }
-.section-about h1 {
+.s-about h1 {
   color: #fed92e;
 }
-.section-about a {
+.s-about a {
   background-color: #fed92e;
   border: 1px solid rgb(254, 217, 46);
 }
+.s-about a:hover {
+  background-color: rgb(255, 255, 255);
+}
 
-.section-treinamento {
+.s-treinamento {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../../images/section-bg-01.jpg");
   background-attachment: fixed;
 }
-.section-treinamento h1 {
+.s-treinamento h1 {
   color: #fe2f3e;
 }
-.section-treinamento a {
+.s-treinamento a {
   background-color: #fe2f3e;
+  color: #f5f5f5;
   border: 1px solid rgb(254, 46, 61);
+}
+.s-treinamento a:hover {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+}
+
+.s-planos {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../../images/section-bg-02.jpg");
+  background-attachment: fixed;
+}
+.s-planos h1 {
+  color: #1aebf8;
+  word-break: break-all;
+}
+.s-planos a {
+  background-color: #1aebf8;
+  border: 1px solid rgb(0, 216, 255);
+}
+.s-planos a:hover {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+}
+@media screen and (min-width: 1024px) {
+  .s-planos p {
+    max-width: 80ch;
+  }
+}
+
+.s-pacotes {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../../images/section-bg-03.jpg");
+  background-attachment: fixed;
 }
 
 /*# sourceMappingURL=root.css.map */

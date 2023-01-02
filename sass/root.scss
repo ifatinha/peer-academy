@@ -11,4 +11,10 @@
 /* layouts */
 @import "layouts/header";
 @import "layouts/section";
-@import "layouts/home";
+
+/* home layouts*/
+@import "layouts/home/home";
+@import "layouts/home/s-about";
+@import "layouts/home/s-treinamento";
+@import "layouts/home/s-planos";
+@import "layouts/home/s-pacotes";
