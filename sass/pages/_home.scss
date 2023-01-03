@@ -103,3 +103,9 @@
         @include typography-03(14);
     }
 }
+
+/* section planos */
+.h-pacotes {
+    background           : $linear-gradient, url("./../images/section-bg-04.jpg");
+    background-attachment: $bg-attachment;
+}

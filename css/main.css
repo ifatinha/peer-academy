@@ -245,7 +245,7 @@ a {
 }
 @media screen and (max-height: 600px) {
   .section {
-    height: 150%;
+    min-height: 150%;
   }
 }
 
@@ -321,14 +321,12 @@ a {
   }
 }
 
-.h-pacotes {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../../images/section-bg-04.jpg");
-  background-attachment: fixed;
+.preco {
   flex-direction: column;
   justify-content: center;
   padding: 80px 0;
 }
-.h-pacotes h2 {
+.preco h2 {
   font-family: "Poppins", sans-serif;
   font-size: 2.1875rem;
   line-height: 3.125rem;
@@ -338,42 +336,42 @@ a {
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .h-pacotes {
+  .preco {
     height: auto;
   }
 }
 @media screen and (max-width: 767px) {
-  .h-pacotes {
+  .preco {
     height: auto;
   }
 }
 
-.pacotes-info {
+.preco-info {
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   display: grid;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .pacotes-info {
+  .preco-info {
     grid-template-columns: 1fr;
   }
 }
 @media screen and (max-width: 767px) {
-  .pacotes-info {
+  .preco-info {
     grid-template-columns: 1fr;
   }
 }
 
-.pacotes-item {
+.preco-item {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 30px;
 }
-.pacotes-item h2,
-.pacotes-item h6 {
+.preco-item h2,
+.preco-item h6 {
   color: #ffffff;
 }
-.pacotes-item h6 {
+.preco-item h6 {
   margin-bottom: 20px;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -382,53 +380,53 @@ a {
   line-height: 1rem;
   letter-spacing: 1px;
 }
-.pacotes-item h2 {
+.preco-item h2 {
   font-family: "Poppins", sans-serif;
   font-size: 3.4375rem;
   font-weight: 700;
   line-height: 3.75rem;
 }
-.pacotes-item h2 sub {
+.preco-item h2 sub {
   font-family: "Poppins", sans-serif;
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.125rem;
   letter-spacing: -1px;
 }
-.pacotes-item ul li {
+.preco-item ul li {
   color: #999999;
   padding: 8px 0;
   font-family: "Roboto", "Open Sans", sans-serif, sans-serif;
 }
-.pacotes-item:nth-child(odd) {
+.preco-item:nth-child(odd) {
   align-self: center;
   height: 500px;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .pacotes-item:nth-child(odd) {
+  .preco-item:nth-child(odd) {
     height: auto;
   }
 }
 @media screen and (max-width: 767px) {
-  .pacotes-item:nth-child(odd) {
+  .preco-item:nth-child(odd) {
     height: auto;
   }
 }
-.pacotes-item:nth-child(even) {
+.preco-item:nth-child(even) {
   border: 5px solid rgb(57, 181, 74);
   height: 550px;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .pacotes-item:nth-child(even) {
+  .preco-item:nth-child(even) {
     height: auto;
   }
 }
 @media screen and (max-width: 767px) {
-  .pacotes-item:nth-child(even) {
+  .preco-item:nth-child(even) {
     height: auto;
   }
 }
-.pacotes-item a {
+.preco-item a {
   display: inline-block;
   text-align: center;
 }
@@ -533,6 +531,12 @@ a {
   font-weight: 500;
   line-height: 1rem;
   letter-spacing: 1px;
+}
+
+/* section planos */
+.h-pacotes {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../images/section-bg-04.jpg");
+  background-attachment: fixed;
 }
 
 /*# sourceMappingURL=main.css.map */

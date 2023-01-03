@@ -1,9 +1,7 @@
-.h-pacotes {
-    background           : $linear-gradient, url("./../../images/section-bg-04.jpg");
-    background-attachment: $bg-attachment;
-    flex-direction       : column;
-    justify-content      : center;
-    padding              : 80px 0;
+.preco {
+    flex-direction : column;
+    justify-content: center;
+    padding        : 80px 0;
 
     h2 {
         @include typography-03(35);
@@ -21,7 +19,7 @@
     }
 }
 
-.pacotes-info {
+.preco-info {
     align-items          : center;
     grid-template-columns: repeat(3, 1fr);
     gap                  : 50px;
@@ -36,7 +34,7 @@
     }
 }
 
-.pacotes-item {
+.preco-item {
     background-color: rgba(0, 0, 0, 0.6);
     padding         : 30px;
 
