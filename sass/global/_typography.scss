@@ -22,7 +22,7 @@
 
     @if($size==14) {
         font-size  : rem(14);
-        line-height: rem(40, 14);
+        line-height: rem(14);
     }
 
     @else if($size==16) {
@@ -32,7 +32,7 @@
 
     @else if($size==18) {
         font-size  : rem(18);
-        line-height: rem(28, 18);
+        line-height: rem(18);
     }
 }
 
@@ -49,27 +49,27 @@
     @else if($size==18) {
         font-size     : rem(18);
         font-weight   : 600;
-        line-height   : rem(60, 18);
+        line-height   : rem(18);
         letter-spacing: -1px;
     }
 
     @else if($size==30) {
         font-size     : rem(30);
         font-weight   : 600;
-        line-height   : rem(42, 18);
+        line-height   : rem(18);
         letter-spacing: -1px;
     }
 
     @else if($size==35) {
         font-size     : rem(35);
-        line-height   : rem(50, 35);
+        line-height   : rem(50);
         letter-spacing: -0.7px;
     }
 
     @else if($size==55) {
         font-size  : rem(55);
         font-weight: 700;
-        line-height: rem(65, 55);
+        line-height: rem(60);
     }
 
     @else if($size==80) {

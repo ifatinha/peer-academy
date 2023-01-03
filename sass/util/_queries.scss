@@ -21,4 +21,10 @@ $s-device: 460px;
             @content;
         }
     }
+
+    @else if($size==h) {
+        @media screen and (max-height: 600px) {
+            @content;
+        }
+    }
 }

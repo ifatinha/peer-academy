@@ -4,9 +4,10 @@
 
     align-items: center;
     display    : flex;
+    word-break : break-word;
 
-    @include devices(m) {
-        height: 140%;
+    @include devices(h) {
+        height          : 150%;
     }
 }
 
@@ -32,6 +33,12 @@
 
     span {
         color: $white;
+    }
+
+    &::before {
+        content: "+";
+        color  : $white;
+        display: block;
     }
 
     @include devices(t) {

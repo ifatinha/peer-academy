@@ -1,0 +1,22 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width : 100%
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    color          : inherit;
+    text-decoration: none;
+}

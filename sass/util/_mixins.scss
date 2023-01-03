@@ -6,7 +6,7 @@
 }
 
 @mixin bg-section() {
-    height  : 100%;
+    min-height  : 100%;
     position: relative;
     width   : 100%;
 }
@@ -26,4 +26,8 @@
 
 @mixin border-btn($color) {
     border: 1px solid $color;
+}
+
+@mixin grid() {
+    display: grid;
 }

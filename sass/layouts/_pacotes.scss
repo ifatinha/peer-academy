@@ -1,0 +1,100 @@
+.h-pacotes {
+    background           : $linear-gradient, url("./../../images/section-bg-04.jpg");
+    background-attachment: $bg-attachment;
+    flex-direction       : column;
+    justify-content      : center;
+    padding              : 80px 0;
+
+    h2 {
+        @include typography-03(35);
+        color        : $white;
+        font-weight  : 600;
+        margin-bottom: 40px;
+    }
+
+    @include devices(t) {
+        height: auto;
+    }
+
+    @include devices(m) {
+        height: auto;
+    }
+}
+
+.pacotes-info {
+    align-items          : center;
+    grid-template-columns: repeat(3, 1fr);
+    gap                  : 50px;
+    @include grid();
+
+    @include devices(t) {
+        grid-template-columns: 1fr;
+    }
+
+    @include devices(m) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pacotes-item {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding         : 30px;
+
+    h2,
+    h6 {
+        color: $white;
+    }
+
+    h6 {
+        margin-bottom : 20px;
+        text-transform: uppercase;
+        @include typography-03(14);
+    }
+
+    h2 {
+        @include typography-03(55);
+
+        sub {
+            @include typography-03(18);
+        }
+    }
+
+    ul {
+        li {
+            color  : $gray;
+            padding: 8px 0;
+            @include typography-01(18);
+        }
+    }
+
+    &:nth-child(odd) {
+        align-self: center;
+        height    : 500px;
+
+        @include devices(t) {
+            height: auto;
+        }
+
+        @include devices(m) {
+            height: auto;
+        }
+    }
+
+    &:nth-child(even) {
+        border: 5px solid $green-opacity;
+        height: 550px;
+
+        @include devices(t) {
+            height: auto;
+        }
+
+        @include devices(m) {
+            height: auto;
+        }
+    }
+
+    a {
+        display   : inline-block;
+        text-align: center;
+    }
+}
