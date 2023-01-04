@@ -3,6 +3,16 @@
     background           : $linear-gradient, url("./../images/intro-bg.jpg");
     background-attachment: $bg-attachment;
 
+    @include devices(t) {
+        padding-top   : 100px;
+        padding-bottom: 20px;
+    }
+
+    @include devices(m) {
+        padding-top   : 100px;
+        padding-bottom: 20px;
+    }
+
     a {
         background-color: $yellow;
         @include border-btn($yellow-opacity);
@@ -34,10 +44,7 @@
 .h-planos {
     background           : $linear-gradient, url("./../../images/section-bg-02.jpg");
     background-attachment: $bg-attachment;
-
-    h1 {
-        word-break: break-all;
-    }
+    min-height           : 100%;
 
     a {
         background-color: $blue;

@@ -5,15 +5,10 @@
     align-items: center;
     display    : flex;
     word-break : break-word;
-
-    @include devices(h) {
-        min-height          : 150%;
-    }
 }
 
 .section-info {
-    position: absolute;
-    padding : 2%;
+    padding: 2%;
 
     p {
         color        : $white;
@@ -54,16 +49,16 @@
 
 .odd {
     @include devices(l) {
-        left: 120px;
+        padding-left: 120px;
     }
 }
 
 .even {
-    text-align: right;
-    right     : 0;
+    justify-content : end;
+    text-align      : right;
 
     @include devices(l) {
-        right: 120px;
+        padding-right: 120px;
     }
 
     p {
