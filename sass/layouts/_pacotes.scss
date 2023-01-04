@@ -20,16 +20,11 @@
 }
 
 .preco-info {
-    align-items          : center;
-    grid-template-columns: repeat(3, 1fr);
-    gap                  : 50px;
+    align-items: center;
     @include grid();
+    @include grid-3();
 
     @include devices(t) {
-        grid-template-columns: 1fr;
-    }
-
-    @include devices(m) {
         grid-template-columns: 1fr;
     }
 }
@@ -38,20 +33,19 @@
     background-color: rgba(0, 0, 0, 0.6);
     display         : flex;
     flex-direction  : column;
-    padding         : 30px;
 
     h2,
-    h6 {
+    h3 {
         color: $white;
     }
 
-    h6 {
+    h2 {
         margin-bottom : 20px;
         text-transform: uppercase;
         @include typography-03(14);
     }
 
-    h2 {
+    h3 {
         @include typography-03(55);
 
         sub {
@@ -60,7 +54,8 @@
     }
 
     ul {
-        flex-grow: 1;
+        flex-grow    : 1;
+        margin-bottom: 40px;
 
         li {
             color  : $gray;
@@ -71,7 +66,8 @@
 
     &:nth-child(odd) {
         align-self: center;
-        height    : 400px;
+        height    : 500px;
+        padding   : 30px;
 
         @include devices(t) {
             height: auto;
@@ -83,20 +79,33 @@
     }
 
     &:nth-child(even) {
-        border: 5px solid $green-opacity;
-        height: 500px;
+        border : 5px solid $green-opacity;
+        height : 540px;
+        padding: 50px 30px;
 
         @include devices(t) {
-            height: auto;
-        }
-
-        @include devices(m) {
             height: auto;
         }
     }
 
     a {
-        display   : inline-block;
-        text-align: center;
+        align-self: center;
+        color     : $white;
+        border    : 1px solid transparent;
+        max-width : 200px;
+        @extend %default-btn;
+    }
+
+    a.btn-white {
+        border-color: $white;
+
+        &:hover {
+            background-color: $green;
+            border-color    : $green-opacity;
+        }
+    }
+
+    a.btn-green {
+        background-color: $green;
     }
 }

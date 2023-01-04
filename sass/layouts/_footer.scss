@@ -1,0 +1,105 @@
+.footer {
+    background-color: $black;
+}
+
+.footer-bg {
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)), url("./../images/footer-bg.jpg");
+    padding   : 120px 0;
+    text-align: center;
+    @include bg-properties();
+
+    p {
+        color  : $white;
+        display: inline;
+
+        @include typography-03(30);
+        line-height: rem(38);
+
+        @include devices(l) {
+            margin-right: 30px;
+        }
+
+        @include devices(m) {
+            display   : block;
+            text-align: center;
+        }
+    }
+
+    a {
+        @extend %btn-tomato;
+        @include typography-03(14);
+
+        &:hover {
+            background-color: $white;
+            border-color    : $white;
+            color           : $black;
+        }
+
+        @include devices(t) {
+            margin-top: 20px;
+        }
+
+        @include devices(m) {
+            margin-top: 20px;
+        }
+    }
+}
+
+.footer-container {
+    border-bottom: 1px solid $black-opacity;
+    padding      : 70px 0;
+}
+
+.footer-info {
+    grid-template-columns: 1fr;
+    @include grid();
+
+    @include devices(l) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    h2 {
+        color        : $white;
+        margin-bottom: 30px;
+        @include typography-03(18);
+    }
+
+    address,
+    p {
+        color        : $gray-dark;
+        margin-bottom: 20px;
+        @include typography-01(18);
+    }
+
+    p {
+        a {
+            transition: $transition;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+
+    ul {
+        color    : $white;
+        font-size: rem(22);
+        gap      : 20px;
+        @include flex-properties(flex, center, start);
+
+        i {
+            transition: $transition;
+
+            &:hover {
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+
+.copyright {
+    color     : $gray-dark;
+    text-align: center;
+    padding   : 25px 0;
+    @include typography-01(18);
+}

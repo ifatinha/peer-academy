@@ -1,0 +1,25 @@
+%default-btn {
+    border-radius : 50px;
+    color         : $black-opacity;
+    display       : inline-block;
+    padding       : 15px 35px;
+    text-align    : center;
+    text-transform: uppercase;
+    transition    : $transition;
+    @include typography-03(14);
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+%btn-tomato {
+    background-color: $tomato;
+    border          : 1px solid $tomato-opacity;
+    border-radius   : 3px;
+    color           : $white;
+    display         : inline-block;
+    padding         : 15px 20px;
+    text-transform  : uppercase;
+    transition      : $transition;
+}

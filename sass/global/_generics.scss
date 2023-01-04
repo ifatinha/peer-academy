@@ -2,20 +2,6 @@
     @include container;
 }
 
-.btn {
-    border-radius : 50px;
-    color         : $black-opacity;
-    display       : inline-block;
-    padding       : 18px 35px;
-    text-transform: uppercase;
-    transition    : $transition;
-    @include typography-03(14);
-
-    &:hover {
-        transform: translateY(-2px);
-    }
-}
-
 .title-yellow {
     color: $yellow;
 }

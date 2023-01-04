@@ -16,6 +16,7 @@
     a {
         background-color: $yellow;
         @include border-btn($yellow-opacity);
+        @extend %default-btn;
 
         &:hover {
             background-color: $white-opacity;
@@ -32,6 +33,7 @@
         background-color: $red;
         color           : $gray-light;
         @include border-btn($red-opacity);
+        @extend %default-btn;
 
         &:hover {
             background-color: $white-opacity;
@@ -49,6 +51,7 @@
     a {
         background-color: $blue;
         @include border-btn($blue-opacity);
+        @extend %default-btn;
 
         &:hover {
             background-color: $white-opacity;
@@ -115,4 +118,58 @@
 .h-pacotes {
     background           : $linear-gradient, url("./../images/section-bg-04.jpg");
     background-attachment: $bg-attachment;
+}
+
+/* section comentarios */
+.h-comentarios {
+    background-color     : $black-opacity;
+    background-attachment: $bg-attachment;
+}
+
+.comentarios-container {
+    padding-top   : 120px;
+    padding-bottom: 120px;
+
+    @include devices(t) {
+        padding-top   : 60px;
+        padding-bottom: 60px;
+    }
+
+    @include devices(m) {
+        padding-top   : 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.comentarios-container {
+    @include grid();
+    @include grid-3();
+}
+
+.comentario-item {
+    padding   : 30px;
+    text-align: center;
+
+    img {
+        border-radius: 50%;
+        height       : 200px;
+        margin-bottom: 20px;
+        width        : 200px;
+
+        @include devices(t) {
+            height: 150px;
+            width : 150px;
+        }
+    }
+
+    p {
+        color        : $gray;
+        margin-bottom: 20px;
+        @include typography-01(16);
+    }
+
+    h3 {
+        color: $white;
+        @include typography-03(18);
+    }
 }

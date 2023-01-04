@@ -6,9 +6,9 @@
 }
 
 @mixin bg-section() {
-    min-height  : 100%;
-    position: relative;
-    width   : 100%;
+    min-height: 100%;
+    position  : relative;
+    width     : 100%;
 }
 
 @mixin bg-properties() {
@@ -29,4 +29,14 @@
 
 @mixin grid() {
     display: grid;
+}
+
+@mixin grid-3() {
+    grid-template-columns: $grid-column;
+    gap                  : 50px;
+
+    @include devices(m) {
+        grid-template-columns: 1fr;
+        gap                  : 20px;
+    }
 }
