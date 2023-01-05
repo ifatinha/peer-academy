@@ -26,7 +26,7 @@
 
 //section treinamento
 .h-treinamento {
-    background           : $linear-gradient, url("./../../images/section-bg-01.jpg");
+    background           : $linear-gradient, url("./../images/section-bg-01.jpg");
     background-attachment: $bg-attachment;
 
     a {
@@ -44,7 +44,7 @@
 
 //section planos
 .h-planos {
-    background           : $linear-gradient, url("./../../images/section-bg-02.jpg");
+    background           : $linear-gradient, url("./../images/section-bg-02.jpg");
     background-attachment: $bg-attachment;
     min-height           : 100%;
 
