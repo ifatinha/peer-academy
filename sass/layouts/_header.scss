@@ -1,9 +1,9 @@
 .header {
-    padding-top     : 20px;
-    padding-bottom  : 20px;
-    position        : absolute;
-    width           : 100%;
-    z-index         : 999;
+    padding-top   : 20px;
+    padding-bottom: 20px;
+    position      : absolute;
+    width         : 100%;
+    z-index       : 999;
 }
 
 .header-nav {
@@ -73,7 +73,7 @@
 
     li {
         border-bottom: 1px solid $gray-light;
-        padding-left : 20px
+        padding      : 10px 0 10px 20px;
     }
 
     a {

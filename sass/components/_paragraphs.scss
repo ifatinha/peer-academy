@@ -1,0 +1,5 @@
+%paragraphs {
+    color        : $white;
+    margin-bottom: 30px;
+    @include typography-01(16);
+}

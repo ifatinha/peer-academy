@@ -2,3 +2,112 @@
     background           : $linear-gradient, url("./../../images/about-bg.jpg");
     background-attachment: $bg-attachment;
 }
+
+/* main */
+.about-main {
+    @include grid();
+    background-color: darkcyan;
+
+    @include devices(l) {
+        grid-template-columns: 1fr 1fr;
+        gap                  : 40px;
+        padding-right        : 120px;
+    }
+
+    @include devices(t) {
+        align-self: center;
+    }
+
+    @include devices(m) {
+        align-self    : end;
+        padding-top   : 100px;
+        padding-bottom: 50px;
+    }
+}
+
+.about-text {
+    p {
+        @extend %paragraphs;
+    }
+
+    a {
+        color         : $yellow-opacity;
+        display       : inline-block;
+        text-transform: uppercase;
+        transition    : $transition;
+        @include typography-03(14);
+
+        &::before {
+            border-bottom : 2px solid $yellow-opacity;
+            content       : "";
+            display       : inline-block;
+            vertical-align: middle;
+            margin-right  : 1rem;
+            transition    : $transition;
+            width         : 1.5rem;
+        }
+
+        &:hover {
+            padding-left: 5px;
+        }
+    }
+}
+
+/* stats */
+.stats {
+    background-color     : $black;
+    background-attachment: $bg-attachment;
+}
+
+.stats-text {
+    p {
+        margin-top: 30px;
+        @extend %paragraphs;
+    }
+}
+
+.stats-activities {
+    align-self: center;
+    padding   : 0 2%;
+
+    p {
+        color         : $white;
+        margin-bottom : 10px;
+        text-transform: uppercase;
+        @include typography-03(14);
+    }
+
+    .bar {
+        background-color: rgba(85, 85, 85, 0.6);
+        border-radius   : 20px;
+        height          : 12px;
+        margin-bottom   : 20px;
+        position        : relative;
+        width           : 100%;
+
+        .bar-item {
+            background-color: $white;
+            border-radius   : 20px;
+            left            : 0;
+            height          : 12px;
+            position        : absolute;
+            top             : 0;
+        }
+
+        .bar-80 {
+            width: 80%;
+        }
+
+        .bar-70 {
+            width: 70%;
+        }
+
+        .bar-95 {
+            width: 95%;
+        }
+
+        .bar-78 {
+            width: 78%;
+        }
+    }
+}
