@@ -24,19 +24,13 @@
 
 .section-title {
     @include typography-03(80);
-    display: flex;
 
     span {
         color: $white;
     }
 
-    &::before {
-        content: "+";
-        color  : $white;
-        display: block;
-    }
-
     @include devices(t) {
+        display       : flex;
         flex-direction: column;
     }
 
@@ -54,8 +48,8 @@
 }
 
 .even {
-    justify-content : end;
-    text-align      : right;
+    justify-content: end;
+    text-align     : right;
 
     @include devices(l) {
         padding-right: 120px;
