@@ -6,7 +6,6 @@
 /* main */
 .about-main {
     @include grid();
-    background-color: darkcyan;
 
     @include devices(l) {
         grid-template-columns: 1fr 1fr;
@@ -109,5 +108,166 @@
         .bar-78 {
             width: 78%;
         }
+    }
+}
+
+/* about gallery */
+
+.galeria {
+    grid-template-columns: repeat(3, 1fr);
+    @include grid();
+
+    @include devices(t) {
+        grid-template-columns: 1fr;
+    }
+
+    @include devices(m) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.galeria-item {
+    cursor  : pointer;
+    position: relative;
+
+    img {
+        display: block;
+        width  : 100%;
+    }
+
+    h2 {
+        color     : $white;
+        left      : 50%;
+        position  : absolute;
+        top       : 50%;
+        transform : translate(-50%, -50%);
+        transition: $transition;
+        text-align: center;
+        @include typography-03(30);
+        line-height: rem(30);
+    }
+
+    &:hover h2 {
+        opacity: 0;
+        top    : 0;
+    }
+
+    &:hover .overlay {
+        height: 100%;
+    }
+}
+
+.a-horario {
+    background-color     : $black-opacity;
+    background-attachment: $bg-attachment;
+    padding              : 80px 0;
+}
+
+.horario-container {
+    grid-template-columns: 1fr 1fr;
+    @include grid();
+
+    @include devices(t) {
+        grid-template-columns: 1fr;
+    }
+
+    @include devices(m) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.horario-item {
+    gap                  : 30px;
+    margin-bottom        : 50px;
+    padding              : 0 25px;
+    grid-template-columns: auto 2fr;
+    @include grid();
+
+    @include devices(m) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.horario-icon {
+    background-color: #323232;
+    border          : 1px solid $black-light;
+    border-radius   : 50%;
+    display         : block;
+    font-size       : rem(28);
+    height          : 70px;
+    line-height     : 70px;
+    text-align      : center;
+    width           : 70px;
+
+    i {
+        color : $blue;
+        height: 28px;
+        width : 28px;
+    }
+}
+
+.horario-text {
+    h2 {
+        color        : $white;
+        margin-bottom: 15px;
+        @include typography-03(18);
+    }
+
+    p {
+        color      : $gray;
+        font-family: $font-01;
+        line-height: 28px;
+    }
+}
+
+/* a-bg section */
+.a-bg {
+    background           : $linear-gradient, url("./../images/about-bg-02.jpg");
+    background-attachment: $bg-attachment;
+
+    a {
+        background-color: $red;
+        color           : $gray-light;
+        @include border-btn($red-opacity);
+        @extend %default-btn;
+
+        &:hover {
+            background-color: $white-opacity;
+            color           : $black;
+        }
+    }
+}
+
+/* about info*/
+.a-info {
+    background-color     : $black-light;
+    background-attachment: $bg-attachment;
+}
+
+.a-info_container {
+    padding         : 120px 0;
+    @include grid();
+    @include grid-3();
+}
+
+.a-info_item {
+    text-align      : center;
+
+    span {
+        color        : $red;
+        display      : inline-block;
+        margin-bottom: 20px;
+        @include typography-03(35);
+    }
+
+    h2 {
+        color        : $white;
+        margin-bottom: 20px;
+        @include typography-03(30);
+    }
+
+    p {
+        color: $white;
+        @include typography-03(18);
     }
 }
