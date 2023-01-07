@@ -1,0 +1,79 @@
+#contato {
+    background-color: $black;
+}
+
+.contato {
+    padding-top: 90px;
+    width      : 100%;
+}
+
+.contato-container {
+    grid-template-columns: 1fr;
+    @include grid();
+
+    @include devices(l) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    img {
+        display: block;
+        height : 100%;
+    }
+}
+
+.contato-text {
+    padding: 50px 75px;
+
+    p {
+        color     : $gray;
+        margin-top: 30px;
+        @include typography-01(16);
+    }
+
+    @include devices(m) {
+        padding: 50px;
+    }
+}
+
+.mapa {
+    width: 100%;
+
+    iframe {
+        width: 100%;
+    }
+}
+
+.form-container {
+    background-attachment: $bg-attachment;
+    padding              : 50px;
+    width                : 100%;
+
+    @include devices(l) {
+        padding: 120px;
+    }
+
+    h2 {
+        color        : $white;
+        font-weight  : 600;
+        margin-bottom: 30px;
+        @include typography-03(35);
+    }
+
+    input,
+    textarea {
+        border       : none;
+        background   : transparent;
+        border-bottom: 1px solid rgba(70, 70, 70, 0.4);
+        color        : $gray-dark;
+        line-height  : rem(28);
+        margin-bottom: 30px;
+        outline      : none;
+        padding      : 5px 15px;
+        width        : 100%;
+        @include typography-01(14);
+    }
+
+    a {
+        @extend %btn-blue;
+    }
+}

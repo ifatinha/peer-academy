@@ -4,7 +4,6 @@
 
     align-items: center;
     display    : flex;
-    padding    : 0 2%;
     word-break : break-word;
 
     @include devices(t) {

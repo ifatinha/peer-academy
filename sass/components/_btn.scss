@@ -45,3 +45,18 @@
         padding-left: 5px;
     }
 }
+
+%btn-blue {
+    background-color: $blue;
+    border-radius   : 3px;
+    display         : inline-block;
+    padding         : 16px 40px;
+    text-align      : center;
+    text-transform  : uppercase;
+    transition      : $transition;
+    @include typography-03(14);
+
+    &:hover {
+        background-color: $blue-opacity;
+    }
+}

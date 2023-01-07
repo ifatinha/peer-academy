@@ -10,21 +10,25 @@
 .p-pacotes {
     background           : $linear-gradient, url("./../images/precos-bg-02.jpg");
     background-attachment: $bg-attachment;
+
 }
 
 .p-basico {
     background           : $linear-gradient, url("./../images/preco-basico-bg.jpg");
     background-attachment: $bg-attachment;
+    padding              : 0 4%;
 }
 
 .p-moderado {
     background           : $linear-gradient, url("./../images/preco-moderado-bg.jpg");
     background-attachment: $bg-attachment;
+    padding              : 0 4%;
 }
 
 .p-fera {
     background           : $linear-gradient, url("./../images/preco-fera-bg.jpg");
     background-attachment: $bg-attachment;
+    padding              : 0 4%;
 }
 
 .preco-container {
