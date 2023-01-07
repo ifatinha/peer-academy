@@ -39,3 +39,28 @@
         @extend %paragraphs;
     }
 }
+
+.texts-generics {
+    h2 {
+        color        : $white;
+        font-weight  : 600;
+        margin-bottom: 10px;
+        @include typography-03(35);
+    }
+
+    p {
+        color        : $gray;
+        margin-bottom: 10px;
+        @include typography-01(16);
+
+        &:last-of-type {
+            margin-top   : 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    span {
+        color      : $white;
+        font-weight: 700;
+    }
+}

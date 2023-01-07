@@ -1,0 +1,44 @@
+.precos-bg {
+    background           : $linear-gradient, url("./../images/precos-bg-01.jpg");
+    background-attachment: $bg-attachment;
+
+    a {
+        @extend %btn-yellow;
+    }
+}
+
+.p-pacotes {
+    background           : $linear-gradient, url("./../images/precos-bg-02.jpg");
+    background-attachment: $bg-attachment;
+}
+
+.p-basico {
+    background           : $linear-gradient, url("./../images/preco-basico-bg.jpg");
+    background-attachment: $bg-attachment;
+}
+
+.p-moderado {
+    background           : $linear-gradient, url("./../images/preco-moderado-bg.jpg");
+    background-attachment: $bg-attachment;
+}
+
+.p-fera {
+    background           : $linear-gradient, url("./../images/preco-fera-bg.jpg");
+    background-attachment: $bg-attachment;
+}
+
+.preco-container {
+    max-width: 600px;
+    width    : 100%;
+
+    a {
+        background-color: $blue;
+        @include border-btn($blue-opacity);
+        @extend %default-btn;
+
+        &:hover {
+            background-color: $white-opacity;
+            color           : $black;
+        }
+    }
+}

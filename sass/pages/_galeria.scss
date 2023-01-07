@@ -1,0 +1,53 @@
+#header-galeria {
+    background-color: $black;
+}
+
+.g-container {
+    background-color     : $black-opacity;
+    grid-template-columns: repeat(3, 1fr);
+    gap                  : 20px;
+    padding              : 160px 20px 60px 20px;
+    @include grid();
+
+    @include devices(l) {
+        padding: 160px 120px 60px 120px;
+    }
+    
+    @include devices(m) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.overlay-img {
+    background-color: rgba(0, 0, 0, 0.6);
+    height          : 100%;
+    left            : 0;
+    overflow        : hidden;
+    opacity         : 0;
+    position        : absolute;
+    transition      : $transition;
+    top             : 0;
+    width           : 100%;
+
+    span {
+        color   : $gray;
+        position: absolute;
+        top     : 10px;
+        right   : 10px;
+    }
+}
+
+.g-item {
+    cursor  : pointer;
+    overflow: hidden;
+    position: relative;
+
+    &:hover .overlay-img {
+        opacity: 1;
+    }
+
+    img {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        display   : block;
+    }
+}

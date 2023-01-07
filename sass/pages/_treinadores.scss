@@ -1,0 +1,82 @@
+.treinadores-bg {
+    background           : $linear-gradient, url("./../images/treinadores-bg-01.jpg");
+    background-attachment: $bg-attachment;
+}
+
+.treinadores {
+    width: 100%;
+}
+
+.treinadores-item {
+    background-attachment: fixed;
+    grid-template-columns: 1fr 1fr;
+
+    @include grid();
+
+    @include devices(m) {
+        grid-template-columns: 1fr;
+
+        &:nth-child(2) img {
+            grid-row: 1;
+        }
+
+        &:nth-child(4) img {
+            grid-row: 1;
+        }
+    }
+
+    img {
+        display: block;
+        height : 100%;
+    }
+
+}
+
+.treinadores-desc {
+    background-color: $black;
+    padding         : 30px;
+
+    @include devices(l) {
+        padding: 120px;
+    }
+
+    ul {
+        gap: 10px;
+        @include flex-properties(flex, center, start);
+
+        a {
+            background-color: $gray;
+            border-radius   : 50%;
+            color           : $black-light;
+            display         : inline-block;
+            height          : 26px;
+            font-size       : rem(12);
+            line-height     : rem(28);
+            text-align      : center;
+            transition      : $transition;
+            width           : 26px;
+
+            &:hover {
+                background-color: $green;
+            }
+
+        }
+    }
+}
+
+.reserva-bg {
+    background           : $linear-gradient, url("./../../images/treinadores-bg-02.jpg");
+    background-attachment: $bg-attachment;
+
+    a {
+        background-color: $red;
+        color           : $gray-light;
+        @include border-btn($red-opacity);
+        @extend %default-btn;
+
+        &:hover {
+            background-color: $white-opacity;
+            color           : $black;
+        }
+    }
+}
