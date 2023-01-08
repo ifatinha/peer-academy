@@ -64,5 +64,6 @@
 
     &:hover {
         background-color: darken($blue, 10%);
+        transform       : translateY(-2px);
     }
 }

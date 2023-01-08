@@ -255,6 +255,7 @@ a {
 }
 .form-container a:hover {
   background-color: #07ccd8;
+  transform: translateY(-2px);
 }
 
 /* layouts */
@@ -859,7 +860,7 @@ a {
 }
 
 .about {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../../images/about-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./../images/about-bg.jpg");
   background-attachment: fixed;
 }
 
