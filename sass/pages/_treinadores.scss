@@ -73,7 +73,7 @@
         background-color: $red;
         color           : $gray-light;
         @include border-btn($red-opacity);
-        @extend %default-btn;
+        @extend %btn-default;
 
         &:hover {
             background-color: $white-opacity;

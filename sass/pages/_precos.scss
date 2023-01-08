@@ -32,8 +32,8 @@
 }
 
 .preco-container {
-    max-width       : 600px;
-    width           : 100%;
+    max-width: 750px;
+    width    : 100%;
 
     @include devices(l) {
         padding: 0 120px;
@@ -42,7 +42,7 @@
     a {
         background-color: $blue;
         @include border-btn($blue-opacity);
-        @extend %default-btn;
+        @extend %btn-default;
 
         &:hover {
             background-color: $white-opacity;

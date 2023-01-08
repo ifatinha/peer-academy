@@ -100,7 +100,7 @@
         color     : $white;
         border    : 1px solid transparent;
         max-width : 200px;
-        @extend %default-btn;
+        @extend %btn-default;
     }
 
     a.btn-white {

@@ -2,9 +2,9 @@
     align-items: center;
     word-break : break-word;
 
+    @include display(flex);
     @include bg-properties;
     @include bg-section;
-    @include display(flex);
 
     @include devices(t) {
         padding-top: 100px;

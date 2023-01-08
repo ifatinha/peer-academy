@@ -211,7 +211,7 @@
         background-color: $red;
         color           : $gray-light;
         @include border-btn($red-opacity);
-        @extend %default-btn;
+        @extend %btn-default;
 
         &:hover {
             background-color: $white-opacity;
@@ -237,8 +237,6 @@
         @include grid-columns(1fr);
         @include grid-gap(20px);
     }
-
-    background-color: darkcyan;
 }
 
 .a-info_item {

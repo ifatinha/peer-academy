@@ -15,8 +15,8 @@
 
     a {
         background-color: $yellow;
+        @extend %btn-default;
         @include border-btn($yellow-opacity);
-        @extend %default-btn;
 
         &:hover {
             background-color: $white-opacity;
@@ -32,8 +32,9 @@
     a {
         background-color: $red;
         color           : $gray-light;
+        transition      : .5s;
         @include border-btn($red-opacity);
-        @extend %default-btn;
+        @extend %btn-default;
 
         &:hover {
             background-color: $white-opacity;
@@ -51,7 +52,7 @@
     a {
         background-color: $blue;
         @include border-btn($blue-opacity);
-        @extend %default-btn;
+        @extend %btn-default;
 
         &:hover {
             background-color: $white-opacity;

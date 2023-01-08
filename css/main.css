@@ -173,14 +173,6 @@ a {
 }
 
 /* components */
-.stats-text p, .about-text p, .overlay p {
-  color: #ffffff;
-  margin-bottom: 30px;
-  font-family: "Roboto", "Open Sans", sans-serif, sans-serif;
-  font-size: 1rem;
-  line-height: 1.75rem;
-}
-
 .preco-container a, .reserva-bg a, .a-bg a, .h-planos a, .h-treinamento a, .h-about a, .preco-item a {
   border-radius: 50px;
   color: rgb(29, 29, 29);
@@ -256,6 +248,14 @@ a {
 .form-container a:hover {
   background-color: #07ccd8;
   transform: translateY(-2px);
+}
+
+.stats-text p, .about-text p, .overlay p {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-family: "Roboto", "Open Sans", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.75rem;
 }
 
 /* layouts */
@@ -354,13 +354,13 @@ a {
 .section {
   align-items: center;
   word-break: break-word;
+  display: flex;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100%;
   position: relative;
   width: 100%;
-  display: flex;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .section {
@@ -706,6 +706,7 @@ a {
 .h-treinamento a {
   background-color: #fe2f3e;
   color: #f5f5f5;
+  transition: 0.5s;
   border: 1px solid rgb(254, 46, 61);
 }
 .h-treinamento a:hover {
@@ -1080,7 +1081,6 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
-  background-color: darkcyan;
 }
 @media screen and (max-width: 767px) {
   .a-info_container {
@@ -1222,7 +1222,7 @@ a {
 }
 
 .preco-container {
-  max-width: 600px;
+  max-width: 750px;
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
