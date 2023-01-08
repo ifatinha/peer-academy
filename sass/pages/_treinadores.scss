@@ -11,7 +11,7 @@
     background-attachment: fixed;
     grid-template-columns: 1fr 1fr;
 
-    @include grid();
+    @include display(grid);
 
     @include devices(m) {
         grid-template-columns: 1fr;
@@ -42,7 +42,8 @@
 
     ul {
         gap: 10px;
-        @include flex-properties(flex, center, start);
+        @include display(flex);
+        @include flex-properties(center, start);
 
         a {
             background-color: $gray;

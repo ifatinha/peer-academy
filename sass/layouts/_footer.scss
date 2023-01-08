@@ -29,12 +29,6 @@
         @extend %btn-tomato;
         @include typography-03(14);
 
-        &:hover {
-            background-color: $white;
-            border-color    : $white;
-            color           : $black;
-        }
-
         @include devices(t) {
             margin-top: 20px;
         }
@@ -51,11 +45,11 @@
 }
 
 .footer-info {
-    grid-template-columns: 1fr;
-    @include grid();
+    @include display(grid);
+    @include grid-columns(1fr);
 
     @include devices(l) {
-        grid-template-columns: repeat(4, 1fr);
+        @include grid-columns(repeat(4, 1fr));
     }
 
     h2 {
@@ -85,7 +79,8 @@
         color    : $white;
         font-size: rem(22);
         gap      : 20px;
-        @include flex-properties(flex, center, start);
+        @include display(flex);
+        @include flex-properties(center, start);
 
         i {
             transition: $transition;

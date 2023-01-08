@@ -22,6 +22,12 @@
     padding         : 15px 20px;
     text-transform  : uppercase;
     transition      : $transition;
+
+    &:hover {
+        background-color: $white;
+        border-color    : $white;
+        color           : $black;
+    }
 }
 
 %btn-yellow {

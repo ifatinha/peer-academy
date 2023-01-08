@@ -142,8 +142,14 @@
 }
 
 .comentarios-container {
-    @include grid();
-    @include grid-3();
+    @include display(grid);
+    @include grid-columns(repeat(3, 1fr));
+    @include grid-gap(50px);
+
+    @include devices(m) {
+        @include grid-columns(1fr);
+        @include grid-gap(20px);
+    }
 }
 
 .comentario-item {

@@ -17,9 +17,8 @@
     background-repeat  : no-repeat;
 }
 
-@mixin flex-properties($display:flex, $align-items, $justify-content) {
+@mixin flex-properties($align-items, $justify-content) {
     align-items    : $align-items;
-    display        : $display;
     justify-content: $justify-content;
 }
 
@@ -27,16 +26,14 @@
     border: 1px solid $color;
 }
 
-@mixin grid() {
-    display: grid;
+@mixin display($propertie) {
+    display: #{$propertie};
 }
 
-@mixin grid-3() {
-    grid-template-columns: $grid-column;
-    gap                  : 50px;
+@mixin grid-columns($columns) {
+    grid-template-columns: #{$columns};
+}
 
-    @include devices(m) {
-        grid-template-columns: 1fr;
-        gap                  : 20px;
-    }
+@mixin grid-gap($gap) {
+    gap: #{$gap}
 }

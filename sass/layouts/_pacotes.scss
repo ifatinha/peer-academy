@@ -21,18 +21,24 @@
 
 .preco-info {
     align-items: center;
-    @include grid();
-    @include grid-3();
+    @include display(grid);
+    @include grid-columns(repeat(3, 1fr));
+    @include grid-gap(50px);
 
     @include devices(t) {
-        grid-template-columns: 1fr;
+        @include grid-columns(1fr);
+    }
+
+    @include devices(m) {
+        @include grid-columns(1fr);
+        @include grid-gap(20px);
     }
 }
 
 .preco-item {
     background-color: rgba(0, 0, 0, 0.6);
-    display         : flex;
     flex-direction  : column;
+    @include display(flex);
 
     h2,
     h3 {
@@ -46,6 +52,7 @@
     }
 
     h3 {
+        margin-bottom: 30px;
         @include typography-03(55);
 
         sub {

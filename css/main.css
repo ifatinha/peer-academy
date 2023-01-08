@@ -173,6 +173,14 @@ a {
 }
 
 /* components */
+.stats-text p, .about-text p, .overlay p {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-family: "Roboto", "Open Sans", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
 .preco-container a, .reserva-bg a, .a-bg a, .h-planos a, .h-treinamento a, .h-about a, .preco-item a {
   border-radius: 50px;
   color: rgb(29, 29, 29);
@@ -200,6 +208,11 @@ a {
   padding: 15px 20px;
   text-transform: uppercase;
   transition: 0.3s all ease-in-out;
+}
+.footer-bg a:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
 }
 
 .precos-bg a, .about-text a {
@@ -244,14 +257,6 @@ a {
   background-color: #07ccd8;
 }
 
-.stats-text p, .about-text p, .overlay p {
-  color: #ffffff;
-  margin-bottom: 30px;
-  font-family: "Roboto", "Open Sans", sans-serif, sans-serif;
-  font-size: 1rem;
-  line-height: 1.75rem;
-}
-
 /* layouts */
 .header {
   padding-top: 20px;
@@ -262,8 +267,8 @@ a {
 }
 
 .header-nav {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -277,8 +282,8 @@ a {
 }
 
 .nav-desktop {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   color: #ffffff;
   gap: 40px;
@@ -346,15 +351,15 @@ a {
 }
 
 .section {
+  align-items: center;
+  word-break: break-word;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100%;
   position: relative;
   width: 100%;
-  align-items: center;
   display: flex;
-  word-break: break-word;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .section {
@@ -464,22 +469,22 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .preco-info {
+    grid-template-columns: 1fr;
+  }
+}
 @media screen and (max-width: 767px) {
   .preco-info {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .preco-info {
-    grid-template-columns: 1fr;
-  }
-}
 
 .preco-item {
   background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
   flex-direction: column;
+  display: flex;
 }
 .preco-item h2,
 .preco-item h3 {
@@ -495,6 +500,7 @@ a {
   letter-spacing: 1px;
 }
 .preco-item h3 {
+  margin-bottom: 30px;
   font-family: "Poppins", sans-serif;
   font-size: 3.4375rem;
   font-weight: 700;
@@ -598,11 +604,6 @@ a {
   line-height: 1rem;
   letter-spacing: 1px;
 }
-.footer-bg a:hover {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #000000;
-}
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .footer-bg a {
     margin-top: 20px;
@@ -620,8 +621,8 @@ a {
 }
 
 .footer-info {
-  grid-template-columns: 1fr;
   display: grid;
+  grid-template-columns: 1fr;
 }
 @media screen and (min-width: 1024px) {
   .footer-info {
@@ -653,8 +654,8 @@ a {
   color: #ffffff;
   font-size: 1.375rem;
   gap: 20px;
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: start;
 }
 .footer-info ul i {
@@ -1078,6 +1079,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
+  background-color: darkcyan;
 }
 @media screen and (max-width: 767px) {
   .a-info_container {
@@ -1157,8 +1159,8 @@ a {
 }
 .treinadores-desc ul {
   gap: 10px;
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: start;
 }
 .treinadores-desc ul a {

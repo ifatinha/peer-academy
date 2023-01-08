@@ -9,7 +9,7 @@
 
 .contato-container {
     grid-template-columns: 1fr;
-    @include grid();
+    @include display(grid);
 
     @include devices(l) {
         grid-template-columns: 1fr 1fr;

@@ -5,7 +5,7 @@
 
 /* main */
 .about-main {
-    @include grid();
+    @include display(grid);
 
     @include devices(l) {
         grid-template-columns: 1fr 1fr;
@@ -97,7 +97,7 @@
 
 .galeria {
     grid-template-columns: repeat(3, 1fr);
-    @include grid();
+    @include display(grid);
 
     @include devices(t) {
         grid-template-columns: 1fr;
@@ -147,7 +147,7 @@
 
 .horario-container {
     grid-template-columns: 1fr 1fr;
-    @include grid();
+    @include display(grid);
 
     @include devices(t) {
         grid-template-columns: 1fr;
@@ -163,7 +163,7 @@
     margin-bottom        : 50px;
     padding              : 0 25px;
     grid-template-columns: auto 2fr;
-    @include grid();
+    @include display(grid);
 
     @include devices(m) {
         grid-template-columns: 1fr;
@@ -228,8 +228,17 @@
 
 .a-info_container {
     padding: 120px 0;
-    @include grid();
-    @include grid-3();
+    @include display(grid);
+    
+    @include grid-columns(repeat(3, 1fr));
+    @include grid-gap(50px);
+
+    @include devices(m) {
+        @include grid-columns(1fr);
+        @include grid-gap(20px);
+    }
+
+    background-color: darkcyan;
 }
 
 .a-info_item {

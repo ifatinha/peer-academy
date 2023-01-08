@@ -1,10 +1,10 @@
 .section {
+    align-items: center;
+    word-break : break-word;
+
     @include bg-properties;
     @include bg-section;
-
-    align-items: center;
-    display    : flex;
-    word-break : break-word;
+    @include display(flex);
 
     @include devices(t) {
         padding-top: 100px;
